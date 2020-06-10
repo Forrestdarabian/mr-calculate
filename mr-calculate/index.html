@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./maths.svg" />
+    <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Mr. Calculate</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div id="progressbar"></div>
+      <div id="scrollPath"></div>
+      <div id="progressbarTwo"></div>
+      <div id="scrollPathTwo"></div>
+      <div class="wavy">
+      <span style="--i:1;">M</span>
+      <span style="--i:2;">r</span>
+      <span style="--i:3;">.</span>
+      <span style="--i:4;"> </span>
+      <span style="--i:5">C</span>
+      <span style="--i:6;">a</span>
+      <span style="--i:7;">l</span>
+      <span style="--i:8;">c</span>
+      <span style="--i:9;">u</span>
+      <span style="--i:10;">l</span>
+      <span style="--i:11;">a</span>
+      <span style="--i:12;">t</span>
+      <span style="--i:13;">e</span>
+    </div>
+    <div class="clock">
+      <div class="hour">
+        <div class="hr" id="hr"></div>
+    </div>
+    <div class="min">
+      <div class="mn" id="mn"></div>
+  </div>
+  <div class="sec">
+    <div class="sc" id="sc"></div>
+    
+</div>
+</div>
+
+      <div className="App">
+        
+        <form class="calculator" name="calc">
+          <input class="value" type="text" name="txt" readonly="">
+          <span class="num clear" onClick="document.calc.txt.value =''">
+            c
+          </span>
+          <span class="num" onClick="document.calc.txt.value +='/'">
+            /
+          </span>
+          <span class="num" onClick="document.calc.txt.value +='*'">
+            *
+          </span>
+          <span class="num" onClick="document.calc.txt.value +='7'">
+            7
+          </span>
+          <span class="num" onClick="document.calc.txt.value +='8'">
+            8
+          </span>
+          <span class="num" onClick="document.calc.txt.value +='9'">
+            9
+          </span>
+          <span class="num" onClick="document.calc.txt.value +='-'">
+            -
+          </span>
+          <span class="num" onClick="document.calc.txt.value +='4'">
+            4
+          </span>
+          <span class="num" onClick="document.calc.txt.value +='5'">
+            5
+          </span>
+          <span class="num" onClick="document.calc.txt.value +='6'">
+            6
+          </span>
+          <span class="num plus" onClick="document.calc.txt.value +='+'">
+            +
+          </span>
+          <span class="num" onClick="document.calc.txt.value +='3'">
+            3
+          </span>
+          <span class="num" onClick="document.calc.txt.value +='2'">
+            2
+          </span>
+          <span class="num" onClick="document.calc.txt.value +='1'">
+            1
+          </span>
+          <span class="num" onClick="document.calc.txt.value +='0'">
+            0 </span
+          >
+          <span class="num" onClick="document.calc.txt.value +='00'">
+            00 </span
+          >
+          <span class="num" onClick="document.calc.txt.value +='.'">
+            . </span
+          >
+          <span
+            class="num equal"
+            onClick="document.calc.txt.value =eval(calc.txt.value)"
+          >
+            =
+          </span>
+        </input>
+        </form>
+      </div>
+
+        <div class="container">
+          <div class="box">
+            <div class="content">
+              <img src="maths.svg">
+              <p>Calculators are used to calculate numerals and equations, typically in mathematics or business.
+              </p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="content">
+              <img src="maths.svg">
+              <p>The first mechanical calculator was invented by Blaise Pascal, a French mathematician, when he was 19 in 1642, to help is father calculate mathematic sums.</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="content">
+              <img src="maths.svg">
+              <p>Calculators were originally gear driven wheels, but now they use a chip, typically a microchip, and some kind of energy source.</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="content">
+              <img src="maths.svg">
+              <p>The first handheld calculator was invented by Texas Instruments, an American company, in 1967, and were further developed in the early 1970s.</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="content">
+              <img src="maths.svg">
+              <p>School students are common users of calculators, using them to calculate difficult sums, although some say children are too dependent on the devices.</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="content">
+              <img src="maths.svg">
+              <p>The display of numbers on a calculator are visible on an LCD (liquid-crystal display) screen, and are shown on the screen when a button is pressed.</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="content">
+              <img src="maths.svg">
+              <p>Calculators are often powered with chemical or battery energy, solar energy or electrical energy.</p>
+            </div>
+          </div>
+        </div>
+        <footer className="bottom">
+          <div className="footer-container">
+            <div className="copyright">
+              <p>
+                © 2020
+                <a>
+                  <b> Forrest Darabian </b>
+                </a>
+                All Rights Reserved.
+              </p>
+            </div>
+            Icons made by
+            <a
+              href="https://www.flaticon.com/authors/smalllikeart"
+              title="smalllikeart"
+            >
+              smalllikeart
+            </a>
+            from
+            <a href="https://www.flaticon.com/" title="Flaticon">
+              
+              www.flaticon.com
+            </a>
+            <div className="left">
+              Contact / Links
+              <li>
+                
+                <a href="mailto:forrestdarabian@gmail.com">
+                  <i className="ion-ios-email fa-icons"></i>
+                  Contact Me
+                </a>
+              </li>
+              <li>
+                <a href="https://www.forrestdarabian.com/">
+                  <i className="fa-angle-double-right"></i>Developers Site
+                </a>
+              </li>
+            </div>
+          </div>
+        </footer>
+    <script type="text/javascript">
+    const deg = 6;
+    const hr = document.querySelector('#hr');
+    const mn = document.querySelector('#mn');
+    const sc = document.querySelector('#sc');
+
+setInterval(() => {
+  let day = new Date();
+    let hh = day.getHours() * 30;
+    let mm = day.getMinutes() * deg;
+    let ss = day.getSeconds() * deg;
+ hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+ mn.style.transform = `rotateZ(${mm}deg)`;
+ sc.style.transform = `rotateZ(${ss}deg)`;
+
+})
+</script>
+  </body>
+</html>
